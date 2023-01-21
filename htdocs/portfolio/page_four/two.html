@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="two.css">
+</head>
+<body>
+    <div class="menu" onclick="ToMenu()"></div>
+    <div class="nav">
+        <div class="navarea">
+            <ul>
+                <li><a href="../home.html" onmouseenter="changeImage('img_home/wood3.png')">home</a></li>
+                <li><a href="#" onmouseenter="changeImage('img_home/wood1.png')">about</a></li>
+                <li><a href="../page_one/one.html" onmouseenter="changeImage('img_home/wood2.png')">portfolio</a></li>
+                <li><a href="#" onmouseenter="changeImage('img_home/wood4.png')">contact</a></li>
+                <li><a href="#" onmouseenter="changeImage('img_home/wood5.png')">photos</a></li>
+                <li><a href="#" onmouseenter="changeImage('img_home/wood6.png')">favorite</a></li>
+            </ul>
+        </div>
+        <div class="imgarea">
+            <img src="img_home/wood3.png" id="slider">
+        </div>
+    </div>
+
+    <script>
+        function changeImage(anyhing){
+            document.getElementById('slider').src = anyhing;
+        }
+
+        function ToMenu(){
+            const menu = document.querySelector('.menu');
+            const nav = document.querySelector('.nav');
+            menu.classList.toggle('active')
+            nav.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="fhome.css">
+</head>
+<body>
+    <div class="menu" onclick="ToMenu()"></div>
+    <div class="nav">
+        <div class="navarea">
+            <ul>
+                <li><a href="index.html" onmouseenter="changeImage('img_home/wood3.png')">home</a></li>
+                <li><a href="page_three/threep1.html" onmouseenter="changeImage('img_home/wood1.png')">about</a></li>
+                <li><a href="../test.php" onmouseenter="changeImage('img_home/wood2.png')">portfolio</a></li>
+                <li><a href="../page_two/two.html" onmouseenter="changeImage('../img_home/wood5.png')">contact</a></li>
+            </ul>
+        </div>
+        <div class="imgarea">
+            <img src="img_home/wood3.png" id="slider">
+        </div>
+    </div>
+    <div class="mainbox">
+        <ul>
+                <li style="--i:6;"><a href="index.html">home</a></li>
+                <li style="--i:5;"><a href="page_three/threep1.html">about</a></li>
+                <li style="--i:4;"><a href="../test.php">portfolio</a></li>
+                <li style="--i:2;"><a href="page_two/two.html">contact</a></li>
+        </ul>
+    </div>
+    <script>
+        function changeImage(anyhing){
+            document.getElementById('slider').src = anyhing;
+        }
+
+        function ToMenu(){
+            const menu = document.querySelector('.menu');
+            const nav = document.querySelector('.nav');
+            menu.classList.toggle('active')
+            nav.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>

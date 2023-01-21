@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="two.css">
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="menu" onclick="ToMenu()"></div>
+    <div class="nav">
+        <div class="navarea">
+            <ul>
+                <li><a href="../index.html" onmouseenter="changeImage('../img_home/wood3.png')">home</a></li>
+                <li><a href="../page_three/threep1.html" onmouseenter="changeImage('../img_home/wood1.png')">about</a></li>
+                <li><a href="../../test.php" onmouseenter="changeImage('../img_home/wood2.png')">portfolio</a></li>
+                <li><a href="../page_two/two.html" onmouseenter="changeImage('../img_home/wood5.png')">contact</a></li>
+            </ul>
+        </div>
+        <div class="imgarea">
+            <img src="../img_home/wood3.png" id="slider">
+        </div>
+    </div>
+    <div class="cont">
+        <div class="box">
+            <b></b>
+            <img src="myimg/my2.png">
+            <div class="content">
+                <h2>My img<br><span>Photos</span></h2>
+                <ul class="sci">
+                    <li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></li>
+                    <li><a href=""><i class="fa fa-camera-retro fa-lg"></i></i></a></li>
+                    <li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <b></b>
+            <img src="myimg/my3.png">
+            <div class="content">
+                <h2>My img<br><span>Photos</span></h2>
+                <ul class="sci">
+                    <li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></li>
+                    <li><a href=""><i class="fa fa-camera-retro fa-lg"></i></i></a></li>
+                    <li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <b></b>
+            <img src="myimg/my4.png">
+            <div class="content">
+                <h2>My img<br><span>Photos</span></h2>
+                <ul class="sci">
+                    <li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></li>
+                    <li><a href=""><i class="fa fa-camera-retro fa-lg"></i></i></a></li>
+                    <li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        function changeImage(anyhing){
+            document.getElementById('slider').src = anyhing;
+        }
+
+        function ToMenu(){
+            const menu = document.querySelector('.menu');
+            const nav = document.querySelector('.nav');
+            menu.classList.toggle('active')
+            nav.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>Document</title>
+  <link rel="stylesheet" href="three.css">
+</head>
+
+<body>
+  <div class="menu" onclick="ToMenu()"></div>
+  <div class="nav">
+    <div class="navarea">
+      <ul>
+        <li><a href="../index.html" onmouseenter="changeImage('../img_home/wood3.png')">home</a></li>
+        <li><a href="threep1.html" onmouseenter="changeImage('../img_home/wood1.png')">about</a></li>
+        <li><a href="../../test.php" onmouseenter="changeImage('../img_home/wood2.png')">portfolio</a></li>
+        <li><a href="../page_two/two.html" onmouseenter="changeImage('../img_home/wood5.png')">contact</a></li>
+      </ul>
+    </div>
+    <div class="imgarea">
+      <img src="../img_home/wood3.png" id="slider">
+    </div>
+  </div>
+  <main>
+    <section class="glass">
+      <div class="dashboard">
+        <div class="user">
+          <img src="./images/avatar.png" alt="" />
+          <h3>Thomas Hiroto</h3>
+          <p>Made by</p>
+        </div>
+        <div class="links">
+          <div class="link">
+            <a href="threep1.html">
+              <img src="./images/library.png" alt="" />
+              <h2>Concept</h2>
+            </a>
+          </div>
+          <div class="link">
+            <a href="threep2.html">
+              <img src="./images/library.png" alt="" />
+              <h2>About</h2>
+            </a>
+          </div>
+          <div class="link">
+            <a href="three.html">
+              <img src="./images/library.png" alt="" />
+              <h2>Works</h2>
+            </a>
+          </div>
+        </div>
+        <div class="pro">
+          <h2>作品達の　一部を　紹介　</h2>
+          <img src="./images/controller.png" alt="" />
+        </div>
+      </div>
+      <div class="cardsarea">
+        <div class="status">
+          <h1>Active Works</h1>
+          <!-- <input type="text" /> -->
+        </div>
+        <div class="cards">
+          <div class="card">
+            <img src="./images/assassins.png" alt="" />
+            <div class="card-info">
+              <h2>Game viewing support</h2>
+              <p>Python</p>
+              <div class="progress"></div>
+            </div>
+            <h2 class="percentage">60%</h2>
+          </div>
+          <div class="card">
+            <img src="./images/sackboy.png" alt="" />
+            <div class="card-info">
+              <h2>Portfolios Works</h2>
+              <p>HTML/CSS/JS</p>
+              <div class="progress"></div>
+            </div>
+            <h2 class="percentage">60%</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="circle1"></div>
+  <div class="circle2"></div>
+  <script>
+    function changeImage(anyhing) {
+      document.getElementById('slider').src = anyhing;
+    }
+
+    function ToMenu() {
+      const menu = document.querySelector('.menu');
+      const nav = document.querySelector('.nav');
+      menu.classList.toggle('active')
+      nav.classList.toggle('active')
+    }
+  </script>
+</body>
+
+</html>
